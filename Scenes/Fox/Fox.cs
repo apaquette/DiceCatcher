@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 public partial class Fox : Area2D
@@ -14,12 +15,12 @@ public partial class Fox : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		
+		move = Input.GetAxis("ui_left", "ui_right");
+		if(!Mathf.IsZeroApprox(move))
+			FoxSprite.FlipH = move > 0;
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-		move = Input.GetAxis("ui_left", "ui_right");
 		Position += new Vector2(move * SPEED * (float)delta, 0);
-		FoxSprite.FlipH = move > 0;
 	}
 }
