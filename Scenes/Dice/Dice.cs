@@ -20,7 +20,7 @@ public partial class Dice : Area2D
 
     public override void _PhysicsProcess(double delta)
     {
-        DiceSprite.GlobalPosition += new Vector2(0, 1) * (float)delta * SPEED;
+        Position += new Vector2(0, 1) * (float)delta * SPEED;
 		DiceSprite.GlobalRotation += ROTATIONSPEED * (float)delta * RotationDirection;
     }
 }
