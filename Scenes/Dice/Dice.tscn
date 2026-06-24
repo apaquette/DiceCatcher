@@ -2,17 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cechvabaddpwt" path="res://Assets/Dice.png" id="1_dauee"]
 [ext_resource type="Script" uid="uid://jbkvrew7vd0t" path="res://Scenes/Dice/Dice.cs" id="1_p3fax"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_p3fax"]
-radius = 54.0
+[ext_resource type="Shape2D" uid="uid://cujidwgopmlvv" path="res://Resources/DiceShape.tres" id="3_53oi2"]
 
 [node name="Dice" type="Area2D" unique_id=212148567 node_paths=PackedStringArray("DiceSprite")]
 script = ExtResource("1_p3fax")
 DiceSprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=10139713]
+position = Vector2(-0.75, 66.52817)
 scale = Vector2(1.415493, 1.4154929)
 texture = ExtResource("1_dauee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634011919]
-shape = SubResource("CircleShape2D_p3fax")
+position = Vector2(-0.75, 66.52817)
+shape = ExtResource("3_53oi2")

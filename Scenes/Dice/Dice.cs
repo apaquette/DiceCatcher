@@ -22,5 +22,16 @@ public partial class Dice : Area2D
     {
         Position += new Vector2(0, 1) * (float)delta * SPEED;
 		DiceSprite.GlobalRotation += ROTATIONSPEED * (float)delta * RotationDirection;
+		CheckGameOver();
     }
+
+	private void CheckGameOver()
+	{
+		Rect2 vpr = GetViewportRect();
+		if(Position.Y > vpr.Size.Y)
+		{
+			SetPhysicsProcess(false);
+			QueueFree();
+		}
+	}
 }
