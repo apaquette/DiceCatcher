@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://jiaw3oxnbwhl"]
+[gd_scene format=3 uid="uid://bp4ylapu4lii3"]
 
-[node name="Fox" type="Node2D" unique_id=999444547]
+[ext_resource type="Texture2D" uid="uid://c2egulx1arql1" path="res://Assets/Fox.png" id="1_2hawp"]
+[ext_resource type="Script" uid="uid://by85d7x8qoo62" path="res://Scenes/Fox/Fox.cs" id="1_xiqmo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xiqmo"]
+size = Vector2(173, 80)
+
+[node name="Fox" type="Area2D" unique_id=328769052 node_paths=PackedStringArray("FoxSprite")]
+script = ExtResource("1_xiqmo")
+FoxSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=345954870]
+scale = Vector2(1.5537634, 1.5537634)
+texture = ExtResource("1_2hawp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=131600165]
+position = Vector2(9.5, 30)
+shape = SubResource("RectangleShape2D_xiqmo")

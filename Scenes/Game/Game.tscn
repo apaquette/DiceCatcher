@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://3lsu022ra6f8" path="res://Assets/GemBg.png" id="1_rdw05"]
 [ext_resource type="PackedScene" uid="uid://hgof3llv8vle" path="res://Scenes/Dice/Dice.tscn" id="2_gwu2e"]
+[ext_resource type="PackedScene" uid="uid://bp4ylapu4lii3" path="res://Scenes/Fox/Fox.tscn" id="3_xbxml"]
 
 [node name="Game" type="Node2D" unique_id=692804315]
 
@@ -13,3 +14,6 @@ centered = false
 [node name="Dice" parent="." unique_id=212148567 instance=ExtResource("2_gwu2e")]
 position = Vector2(729, 70)
 scale = Vector2(0.6, 0.6)
+
+[node name="Fox" parent="." unique_id=328769052 instance=ExtResource("3_xbxml")]
+position = Vector2(638, 577)
